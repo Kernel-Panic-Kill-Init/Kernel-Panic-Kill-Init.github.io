@@ -1,3 +1,20 @@
+:root{
+  --bg: #0b0f14;
+  --panel: #0e131a;
+  --panel-alt:#111821;
+  --text: #e5e7eb;
+  --muted: #a1a1aa;
+  --brand: #e11d48; /* stonowana czerwień */
+  --brand-ink:#fda4af;
+  --border: #1f2937;
+  --maxw: 1120px;
+  --radius: 14px;
+  --shadow: 0 6px 20px rgba(0,0,0,.35);
+}
+.nav{display:none}
+.social__link{list-style:none; margin:0; padding:0; display:flex; gap:20px}
+.social__link{padding:10px 12px; border-radius:10px; color:var(--text)}
+.social__link:hover{background:#121a24}
 
 #case-studies {
   padding: 60px 20px;
@@ -21,7 +38,7 @@
 
 .case-tiles .tile {
   background-color: #0f1620; /* spójne z Retainer */
-  border: 1px solid var(--border);
+  border: 1px solid var(--text);
   border-radius: var(--radius);
   padding: 25px 20px;
   width: 300px;
