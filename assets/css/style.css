@@ -327,28 +327,68 @@ img{
   }
 }
 
-/* Animacja rozwijania menu mobilnego */
-body.nav-open .nav {
-  display: block;
-  position: absolute;
-  top: 64px;
-  left: 0;
-  right: 0;
-  background: #0f1620;
-  border-bottom: 1px solid var(--border);
-  max-height: 0;           /* start od 0 */
-  overflow: hidden;
-  transition: max-height 0.4s ease-out, opacity 0.4s ease;
-  opacity: 0;
-}
-
-body.nav-open .nav__list {
+.nav__toggle {
+  display: inline-flex;
   flex-direction: column;
-  padding: 10px 16px;
+  gap: 5px;
+  border: 1px solid var(--border);
+  background: linear-gradient(90deg, #0f1620, #0c1219);
+  color: var(--text);
+  padding: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
 }
 
-/* kiedy klasa dodana, rozciąga menu */
-body.nav-open .nav {
-  max-height: 500px; /* wystarczająco duże, żeby pomieścić wszystkie linki */
-  opacity: 1;
+.nav__toggle-bar {
+  width: 24px;
+  height: 3px;
+  background: linear-gradient(90deg, #00e5ff, #e11d48);
+  border-radius: 2px;
+  transition: transform 0.5s, opacity 0.5s, filter 0.5s;
+  animation: pulse 1.2s infinite alternate;
+}
+
+/* Glitch efekt przy hover/open */
+.nav__toggle:hover .nav__toggle-bar,
+.nav__toggle.open .nav__toggle-bar {
+  animation: glitch 0.5s infinite;
+}
+
+.nav__toggle.open .nav__toggle-bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  animation: none;
+}
+
+.nav__toggle.open .nav__toggle-bar:nth-child(2) {
+  opacity: 0;
+  animation: none;
+}
+
+.nav__toggle.open .nav__toggle-bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+  animation: none;
+}
+
+/* Podstawowa animacja neonowa */
+@keyframes pulse {
+  0% { filter: brightness(1) hue-rotate(0deg); transform: translateX(0px); }
+  50% { filter: brightness(1.5) hue-rotate(45deg); transform: translateX(2px); }
+  100% { filter: brightness(1) hue-rotate(90deg); transform: translateX(0px); }
+}
+
+/* Cyber-glitch */
+@keyframes glitch {
+  0% { transform: translate(0, 0) skew(0deg); filter: hue-rotate(0deg); }
+  10% { transform: translate(-1px, 1px) skew(-2deg); filter: hue-rotate(20deg); }
+  20% { transform: translate(2px, -1px) skew(1deg); filter: hue-rotate(40deg); }
+  30% { transform: translate(-2px, 2px) skew(-1deg); filter: hue-rotate(60deg); }
+  40% { transform: translate(1px, -1px) skew(2deg); filter: hue-rotate(80deg); }
+  50% { transform: translate(0px, 0px) skew(0deg); filter: hue-rotate(100deg); }
+  60% { transform: translate(-1px, 1px) skew(-1deg); filter: hue-rotate(120deg); }
+  70% { transform: translate(2px, -2px) skew(1deg); filter: hue-rotate(140deg); }
+  80% { transform: translate(-2px, 1px) skew(-2deg); filter: hue-rotate(160deg); }
+  90% { transform: translate(1px, -1px) skew(1deg); filter: hue-rotate(180deg); }
+  100% { transform: translate(0, 0) skew(0deg); filter: hue-rotate(200deg); }
 }

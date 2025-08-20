@@ -209,12 +209,14 @@ const body = document.body;
 
 navToggle.addEventListener('click', () => {
   body.classList.toggle('nav-open');
-  
-  // aktualizacja aria-expanded
+  navToggle.classList.toggle('open');
+
   const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
   navToggle.setAttribute('aria-expanded', !expanded);
 });
+
 </script>
+
 
   <script src="js/main.js" defer></script>
 </body>
