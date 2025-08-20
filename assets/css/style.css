@@ -327,3 +327,28 @@ img{
   }
 }
 
+/* Animacja rozwijania menu mobilnego */
+body.nav-open .nav {
+  display: block;
+  position: absolute;
+  top: 64px;
+  left: 0;
+  right: 0;
+  background: #0f1620;
+  border-bottom: 1px solid var(--border);
+  max-height: 0;           /* start od 0 */
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, opacity 0.4s ease;
+  opacity: 0;
+}
+
+body.nav-open .nav__list {
+  flex-direction: column;
+  padding: 10px 16px;
+}
+
+/* kiedy klasa dodana, rozciąga menu */
+body.nav-open .nav {
+  max-height: 500px; /* wystarczająco duże, żeby pomieścić wszystkie linki */
+  opacity: 1;
+}

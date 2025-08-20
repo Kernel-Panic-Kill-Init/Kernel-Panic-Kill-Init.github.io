@@ -143,7 +143,7 @@
             <p><strong>Response:</strong> < 2h (business days)</p>
             <p><strong>Contact:</p>
             <div class="social">
-              <a class="social__link" href="https://www.linkedin.com/in/filip-%C5%82uka-495a71372" class="button" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a class="social__link" href="https://www.linkedin.com/in/filip-%C5%82uka-495a71372" class="buttn" target="_blank" rel="noreferrer">LinkedIn</a>
               <a class="social__link" href="https://x.com/FilipUka83674?t=bnZbUspU7x2RcqQucaXXFg&s=09" class="button" target="_blank" rel="noreferrer">X</a>
               <a class="social__link" href="mailto:kernel.panic.kill.init@gmail.com" class="button">Email</a>
             </div>
@@ -202,6 +202,19 @@
       <p class="muted">Security portfolio</p>
     </div>
   </footer>
+  
+<script>
+const navToggle = document.querySelector('.nav__toggle');
+const body = document.body;
+
+navToggle.addEventListener('click', () => {
+  body.classList.toggle('nav-open');
+  
+  // aktualizacja aria-expanded
+  const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+  navToggle.setAttribute('aria-expanded', !expanded);
+});
+</script>
 
   <script src="js/main.js" defer></script>
 </body>

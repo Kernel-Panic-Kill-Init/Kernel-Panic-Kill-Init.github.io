@@ -1,6 +1,6 @@
 // mobile menu
 const toggle = document.querySelector('.nav__toggle');
-const nav = document.getElementById('site-nav');
+const nav = document.getElementById('sr-only')
 
 if (toggle) {
   toggle.addEventListener('click', () => {
