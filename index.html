@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filip Łuka — Security Portfolio</title>
+  <meta name="description" content="Web app pentesting, OSINT, recon. Professional security services & case studies by Filip Łuka." />
+  <link rel="preload" href="css/style.css" as="style" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="page">
+  <a class="skiplink" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header__bar">
+      <div class="brand">
+        <!-- logo SVG  -->
+        <a class="brand__link" href="/">Filip Łuka</a>
+        <span class="brand__tag">Security</span>
+      </div>
+
+      <button class="nav__toggle" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <nav id="site-nav" class="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#services">Services</a></li>
+          <li><a class="nav__link" href="#cases">Case Studies</a></li>
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <h1 class="hero__title">Web App Pentesting & OSINT</h1>
+          <p class="hero__subtitle">I help startups and SMBs find, prioritize and fix security issues before they become incidents.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#contact">Get in touch</a>
+            <a class="btn" href="#cases">View case studies</a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <!-- placeholder; zdjęcie/avatar -->
+            <div class="avatar"> <img src="assets/img/portfolio.jpeg" alt="Portret Filip Łuka" loading="eager" decoding="async" /> </div>
+ <!---  <div class="avatar-placeholder" role="img"  aria-label="Profile placeholder"> </div> -->
+        </div>
+      </div>
+    </section>
+
+    <section id="who-am-i" class="section-card expanded" style="background-image: url('assets/img/who-am-i-bg.svg');">
+
+  <h2>Who Am I?</h2>
+  <p>Hi, I'm Filip, a cybersecurity enthusiast diving into Red Team operations. I blend offensive testing with a hint of Blue Team awareness to deliver real-world insights. Always learning, always experimenting, and committed to improving digital security.</p>
+  
+  <ul>
+    <li><span class="icon">💻</span> <strong>Experience:</strong> Red Team & Recon, OSINT, web vulnerabilities</li>
+    <li><span class="icon">🛠️</span> <strong>Tools:</strong> TryHackMe, Termux, Kali Linux, Burp Suite</li>
+    <li><span class="icon">🧠</span> <strong>Mindset:</strong> Analytical, persistent, creative problem-solver</li>
+  </ul>
+</section>
+
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section__title">Services</h2>
+        <div class="cards">
+          <article class="card">
+            <h3 class="card__title">Web App Penetration Testing</h3>
+            <p class="card__text">Manual testing aligned with OWASP, practical risk ratings, clear remediation steps.</p>
+          </article>
+          <article class="card">
+            <h3 class="card__title">OSINT & Recon</h3>
+            <p class="card__text">Passive intelligence to map attack surface: domains, tech stack, exposed assets.</p>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Security Review</h3>
+            <p class="card__text">Lightweight reviews for MVPs/early products: auth flows, configs, common pitfalls.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDIES -->
+    <section id="cases" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">Case Studies</h2>
+        <div class="grid">
+          <article class="tile">
+            <h3 class="tile__title">Passive Recon — e-commerce</h3>
+            <p class="tile__text">Mapped subdomains, outdated services and leaked metadata; prioritized hardening.</p>
+            <div class="tile__actions">
+              <a class="btn btn--ghost" href="#" aria-disabled="true">Preview (soon)</a>
+            </div>
+          </article>
+          <article class="tile">
+            <h3 class="tile__title">Passive Recon — media</h3>
+            <p class="tile__text">Third-party exposure analysis, SPF/DMARC gaps, repo hygiene recommendations.</p>
+            <div class="tile__actions">
+              <a class="btn btn--ghost" href="#" aria-disabled="true">Preview (soon)</a>
+            </div>
+          </article>
+          <article class="tile">
+            <h3 class="tile__title">Active Demo — Juice Shop</h3>
+            <p class="tile__text">Controlled lab exploit chain; report sample with reproducible steps & fixes.</p>
+            <div class="tile__actions">
+              <a class="btn btn--ghost" href="#" aria-disabled="true">Preview (soon)</a>
+            </div>
+          </article>
+        </div>
+      </div>
+       <div class="view-more">
+    <a href="case-studies.html" class="btn" >View More</a>
+  </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container about">
+        <div class="about__copy">
+          <h2 class="section__title">About</h2>
+          <p class="lead">I’m Filip — focused on web application security, practical recon and clear, actionable reporting.</p>
+          <ul class="bullets">
+            <li>OWASP-aligned methodology, no black-box magic</li>
+            <li>Actionable findings with business context</li>
+            <li>Fast feedback loops for engineering teams</li>
+          </ul>
+        </div>
+        <div class="about__meta">
+          <div class="meta">
+            <p><strong>Based:</strong> PL (remote)</p>
+            <p><strong>Response:</strong> < 24h (business days)</p>
+            <p><strong>Contact:</strong> <a href="mailto:kernel.panic.kill.init@gmail.com">kernel.panic.kill.init@gmail.com</a></p>
+            <div class="social">
+              <a class="social__link" href="https://www.linkedin.com/in/filip-%C5%82uka-495a71372" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a class="social__link" href="https://x.com/FilipUka83674?t=bnZbUspU7x2RcqQucaXXFg&s=09" target="_blank" rel="noreferrer">X</a>
+              <a class="social__link" href="mailto:kernel.panic.kill.init@gmail.com">Email</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="retainer">
+  <h2>Monthly Subscription Plans</h2>
+  <div class="retainer-options">
+    <div class="option">
+      <h3>Basic Plan</h3>
+      <p>1 target / week, short reports, email support.</p>
+      <p><strong>$100 / month</strong></p>
+      <a href="mailto:kernel.panic.kill.init@gmail.com?subject=Basic%20Plan%20Inquiry" class="btn">Contact Me</a>
+    </div>
+    <div class="option">
+      <h3>Standard Plan</h3>
+      <p>3 targets / week, detailed reports, priority email support.</p>
+      <p><strong>$250 / month</strong></p>
+      <a href="mailto:kernel.panic.kill.init@gmail.com?subject=Standard%20Plan%20Inquiry" class="btn">Contact Me</a>
+    </div>
+    <div class="option">
+      <h3>Premium Plan</h3>
+      <p>Unlimited targets, comprehensive reports, priority support & consultation.</p>
+      <p><strong>$500 / month</strong></p>
+      <a href="mailto:kernel.panic.kill.init@gmail.com?subject=Premium%20Plan%20Inquiry" class="btn">Contact Me</a>
+    </div>
+  </div>
+</section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section__title">Contact</h2>
+        <form class="form" action="https://formspree.io/f/xvoyoqny" method="POST">
+          <label class="form__field">
+            <span class="form__label">Your email</span>
+            <input class="input" type="email" name="email" required />
+          </label>
+          <label class="form__field">
+            <span class="form__label">Message</span>
+            <textarea class="textarea" name="message" rows="5" required></textarea>
+          </label>
+          <button class="btn btn--primary" type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__row">
+      <p class="muted">© <span id="year"></span> Filip Łuka</p>
+      <p class="muted">Security portfolio</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
